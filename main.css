@@ -1,0 +1,30 @@
+body{
+	font-family: sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+div.pantalla{
+    display: none;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+	left:0px;
+	right:0px;
+	background-color: rgb(246, 178, 107);
+}
+
+#marca_sime{
+	z-index: 1;
+	
+	font-size: 28px;
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	left: 7px;
+	top: 3px;
+}

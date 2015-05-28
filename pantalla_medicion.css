@@ -1,0 +1,12 @@
+#pantalla_medicion
+#valorMedicion{
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	
+	text-align: center;
+	color: rgb(50, 50, 50);
+	font-size: 100px;
+	font-weight: bold;
+	
+}

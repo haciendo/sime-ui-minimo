@@ -1,0 +1,42 @@
+#menuAcceso{
+	z-index: 1;
+	
+    position: absolute;
+	display: none;
+	
+	top: 0px;
+	right: 0px;
+	height: 25px;
+	width: 25px;
+}
+
+#menu{
+	z-index: 1;
+    
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 90px;
+	
+	display: none;
+	/*background-color: rgb(246, 178, 107);*/
+	
+	background-color: rgb(200, 200, 200);
+	
+}
+
+#menu
+div.link_pantalla{
+	border: solid 1px;
+	
+	font-size: 9px;
+	padding: 6px 1px 5px 5px;
+	
+	border-color: rgb(100,100,100);
+}
+
+#menu
+div.selected{
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
