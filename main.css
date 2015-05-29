@@ -11,7 +11,7 @@ ul {
 div.pantalla{
     display: none;
     position: absolute;
-    top: 0px;
+    top: 25px;
     bottom: 0px;
 	left:0px;
 	right:0px;

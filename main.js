@@ -31,7 +31,7 @@ var onDeviceReady = function() {
 	
 	
 	
-	menu();
+	toolbar();
 	
 	pantalla_medicion();
 	pantalla_configuracion();

@@ -1,31 +1,50 @@
-#menuAcceso{
+#toolbar{
 	z-index: 1;
+	position: absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	height:25px;
 	
-    position: absolute;
-	display: none;
+	background-color: rgb(246, 178, 107);
+}
+
+
+#toolbar
+div.toolbar_button{
+	position: absolute;
 	
 	top: 0px;
-	right: 0px;
 	height: 25px;
 	width: 25px;
 }
 
-#menu{
-	z-index: 1;
-    
+#toolbar
+#options{
+	right: 0px;
+}
+
+#toolbar
+#share{
+	right: 25px;
+}
+
+
+#toolbar
+#options_list{
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	width: 90px;
 	
 	display: none;
-	/*background-color: rgb(246, 178, 107);*/
 	
 	background-color: rgb(200, 200, 200);
 	
 }
 
-#menu
+#toolbar
+#options_list
 div.link_pantalla{
 	border: solid 1px;
 	
@@ -35,7 +54,7 @@ div.link_pantalla{
 	border-color: rgb(100,100,100);
 }
 
-#menu
+#toolbar
 div.selected{
 	background-color: rgb(255,255,255);
 	color: rgb(100,100,100);

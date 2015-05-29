@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="main.css" />
-        <link rel="stylesheet" href="menu.css" />
+        <link rel="stylesheet" href="toolbar.css" />
         <link rel="stylesheet" href="pantalla_medicion.css" />
         <link rel="stylesheet" href="pantalla_configuracion.css" />
         <link rel="stylesheet" href="pantalla_exportar.css" />
@@ -14,24 +14,31 @@
 	</head>
 	
 	<body>
-		<div id="menuAcceso">
-			<img src="menu.png"/>
+		<div id="toolbar">
+			<div id="marca_sime">SIME</div>
+			
+			<!-- BOTONES-->
+			
+			<div id="share" class="toolbar_button">
+				<img src="img/share.png"/>
+			</div>
+			
+			<div id="options" class="toolbar_button">
+				<img src="img/options.png"/>
+			</div>
+			<div id="options_list">
+				<div id="link_pantalla_medicion" class="link_pantalla">
+					Medicion
+				</div>
+				<div id="link_pantalla_configuracion" class="link_pantalla">
+					Configuracion
+				</div>
+				<div id="link_salir" class="link_pantalla">
+					Salir
+				</div>
+			</div>
 		</div>
-		<div id="menu">
-			<div id="link_pantalla_medicion" class="link_pantalla">
-				Medicion
-			</div>
-			<div id="link_pantalla_configuracion" class="link_pantalla">
-				Configuracion
-			</div>
-			<div id="link_pantalla_exportar" class="link_pantalla">
-				Exportar
-			</div>
-			<div id="link_salir" class="link_pantalla">
-				Salir
-			</div>
-		</div>
-		<div id="marca_sime">SIME</div>
+		
 		<div id="pantalla_medicion" class="pantalla">
 			<div id="valorMedicion">
 				00.000
@@ -56,10 +63,12 @@
 	<script type="text/javascript" src="lib/vortex.min.js"></script>
 	
 	<script type="text/javascript" src="main.js"></script>
-	<script type="text/javascript" src="menu.js"></script> 
+	<script type="text/javascript" src="toolbar.js"></script> 
 	<script type="text/javascript" src="pantalla_medicion.js"></script>
 	<script type="text/javascript" src="pantalla_configuracion.js"></script>
 	<script type="text/javascript" src="pantalla_exportar.js"></script>
+	
+	<script type="text/javascript" src="gestor_medicion.js"></script>
 
 	<script type="text/javascript" src="phonegap.js"></script>
 </html>
