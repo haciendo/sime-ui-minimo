@@ -10,8 +10,7 @@
 }
 
 
-#toolbar
-div.toolbar_button{
+.toolbar_button{
 	position: absolute;
 	
 	top: 0px;
@@ -19,14 +18,19 @@ div.toolbar_button{
 	width: 25px;
 }
 
+.custom_toolbar{
+	position: fixed;
+	top:0px;
+	right: 25px;
+	left: 85px;
+	height:25px;
+	z-index:2;
+}
+
+
 #toolbar
 #options{
 	right: 0px;
-}
-
-#toolbar
-#share{
-	right: 25px;
 }
 
 

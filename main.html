@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="main.css" />
         <link rel="stylesheet" href="toolbar.css" />
         <link rel="stylesheet" href="pantalla_medicion.css" />
+        <link rel="stylesheet" href="pantalla_lista_mediciones.css" />
         <link rel="stylesheet" href="pantalla_configuracion.css" />
         <link rel="stylesheet" href="pantalla_exportar.css" />
         
@@ -18,10 +19,6 @@
 			<div id="marca_sime">SIME</div>
 			
 			<!-- BOTONES-->
-			
-			<div id="share" class="toolbar_button">
-				<img src="img/share.png"/>
-			</div>
 			
 			<div id="options" class="toolbar_button">
 				<img src="img/options.png"/>
@@ -40,6 +37,12 @@
 		</div>
 		
 		<div id="pantalla_medicion" class="pantalla">
+			<div class="custom_toolbar">
+				<div id="btn_lista_mediciones" class="toolbar_button">
+					<img src="img/list.png"/>
+				</div>
+			</div>
+			
 			<div id="valorMedicion">
 				00.000
 			</div>
@@ -49,6 +52,39 @@
 		</div>
 		<div id="pantalla_exportar" class="pantalla">
 			pantalla_exportar en Construccion
+		</div>
+		<div id="pantalla_lista_mediciones" class="pantalla">
+			<div class="custom_toolbar">
+				<div id="share" class="toolbar_button">
+					<img src="img/share.png"/>
+				</div>
+			</div>
+
+			<div id="lista_mediciones">
+				<ul>
+					<li class="medicion_item">
+						10.133 cm
+					<li>
+					<li class="medicion_item">
+						134.456 cm
+					<li>
+					<li class="medicion_item">
+						3.234 cm
+					<li>
+					<li class="medicion_item">
+						15.678 cm
+					<li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div id="plantillas">
+		
+			<li id="plantilla_medicion_item" class="medicion_item">
+				
+			</li>
+			
 		</div>
 		
 	</body>
@@ -65,9 +101,11 @@
 	<script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript" src="toolbar.js"></script> 
 	<script type="text/javascript" src="pantalla_medicion.js"></script>
+	<script type="text/javascript" src="pantalla_lista_mediciones.js"></script>
 	<script type="text/javascript" src="pantalla_configuracion.js"></script>
 	<script type="text/javascript" src="pantalla_exportar.js"></script>
 	
+	<script type="text/javascript" src="adaptador_usb.js"></script>
 	<script type="text/javascript" src="gestor_medicion.js"></script>
 
 	<script type="text/javascript" src="phonegap.js"></script>

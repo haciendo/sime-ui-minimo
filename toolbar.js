@@ -4,19 +4,8 @@ var toolbar = function(){
 	var ui = $('#toolbar');
 	ui.show();
 	
-	var $share = ui.find('#share');
-	
-	$share.on('click', function(){
-		$('.pantalla').hide();
-		$('#pantalla_exportar').show();
-		
-	});
-	
-	
-	
 	var $options = ui.find('#options');
 	var $options_list = ui.find('#options_list');
-	
 	
 	$options.on('click', function(e){
 		e.stopPropagation();
@@ -26,6 +15,12 @@ var toolbar = function(){
 	$('html').click(function() {
 		$options_list.hide();
 	});
+
+	
+	
+	
+	
+	
 	
 	/********* options_list ITEMS ****************/
 	

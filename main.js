@@ -33,12 +33,13 @@ var onDeviceReady = function() {
 	
 	toolbar();
 	
+	
 	pantalla_medicion();
+	pantalla_lista_mediciones();
 	pantalla_configuracion();
 	pantalla_exportar();
 	
 	/* START POINT */
-	
 	$('#link_pantalla_medicion').click();
 	
 	/***************/
