@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "ledYBotonRemoto"
+        id        = "Sime.AdaptadorUsb"
         versionCode="10" 
         version   = "1.0.0">
 
@@ -9,14 +9,14 @@
     <gap:platform name="android" />
     <preference name="phonegap-version"           value="3.7.0" />
         
-    <name>LedYBotonRemoto</name>
+    <name>Sime.AdaptadorUsb</name>
 
     <description>
         
     </description>
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
-        Javier Lurgo 
+        Haciendo Labs
     </author>
         
     <access origin="*"/>

@@ -5,51 +5,52 @@ $(function(){
 	 * Mock del objeto serial
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-	
-	var serial = {
-		open: function(config, success_callback, err_callback){
-			
-			console.log("mock - serial.open");
-			
-			console.log("config");
-			console.log(config);
-			
-			success_callback();
-			
-		},
-		write: function(data, success_callback, err_callback){
-			
-			console.log("mock - serial.write");
-			
-			console.log("data");
-			console.log(data);
-			
-			success_callback("success");
-			
-		},
-		registerReadCallback: function(read_callback, err_callback){
-			console.log("mock - serial.registerReadCallback");
-			
-			
-			setInterval(function(){
-				
-				read_callback((Math.random() * 100.0).toFixed(3));
-				
-			}, 3000);
-		},
-		requestPermission: function(success_callback, err_callback){
-			console.log("mock - serial.requestPermission");
-			
-			success_callback('success');
-			
-		},
-		close: function(success_callback, err_callback){
-			console.log("mock - serial.close");
-			
-			success_callback('success');
-			
-		}
-	};
+	if(window.serial===undefined){
+		serial = {
+			open: function(config, success_callback, err_callback){
+
+				console.log("mock - serial.open");
+
+				console.log("config");
+				console.log(config);
+
+				success_callback();
+
+			},
+			write: function(data, success_callback, err_callback){
+
+				console.log("mock - serial.write");
+
+				console.log("data");
+				console.log(data);
+
+				success_callback("success");
+
+			},
+			registerReadCallback: function(read_callback, err_callback){
+				console.log("mock - serial.registerReadCallback");
+
+
+				setInterval(function(){
+
+					read_callback((Math.random() * 100.0).toFixed(3));
+
+				}, 3000);
+			},
+			requestPermission: function(success_callback, err_callback){
+				console.log("mock - serial.requestPermission");
+
+				success_callback('success');
+
+			},
+			close: function(success_callback, err_callback){
+				console.log("mock - serial.close");
+
+				success_callback('success');
+
+			}
+		};
+	}
 	/**************************************************
 	 * FIN de Mock de objeto serial
 	 **************************************************/
