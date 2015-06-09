@@ -1,11 +1,9 @@
 $(function(){
-	
-	
 	/**************************************************
 	 * Mock del objeto serial
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-	if(window.serial===undefined){
+	if(!window.isphone){
 		console.log("mockeando objeto serial");
 		serial = {
 			open: function(config, success_callback, err_callback){
@@ -79,9 +77,11 @@ $(function(){
 			
 				serial.registerReadCallback(
 					function(data){
-						
-						var dataFormated = new Uint8Array(data);
-						
+						console.log("data recibida:", data);
+						var dataArray = new Uint8Array(data);
+						console.log("data array:", dataArray);
+						var dataString = String.fromCharCode.apply(null, dataArray);
+						console.log("data string:", dataString);
 						
 						// Mensaje definido en:
 						// https://docs.google.com/document/d/1y0_301NuTZICPXeorPcrvl9MDEuBTutYIUK0CI5smXY/edit
@@ -90,7 +90,7 @@ $(function(){
 						var mensaje = {
 							tipoDeMensaje:"medicion",
 							//valor: String.fromCharCode.apply(null, dataFormated),
-							valor: data,
+							valor: "0,1",
 							unidad:"cm"
 						}
 						
