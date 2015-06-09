@@ -38,5 +38,5 @@ var DivConsola = {
 };
 
 $(function(){
-	DivConsola.start();	
+	if(window.isphone)	DivConsola.start();	
 });

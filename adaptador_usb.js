@@ -90,7 +90,7 @@ $(function(){
 						var mensaje = {
 							tipoDeMensaje:"medicion",
 							//valor: String.fromCharCode.apply(null, dataFormated),
-							valor: "0,1",
+							valor: data,
 							unidad:"cm"
 						}
 						
