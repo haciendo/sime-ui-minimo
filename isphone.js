@@ -1,0 +1,1 @@
+window.isphone = (document.URL.indexOf("com.") > 0);
