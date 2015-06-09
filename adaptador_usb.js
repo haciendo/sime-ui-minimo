@@ -6,6 +6,7 @@ $(function(){
 	 * borrar al implementar en phoneGap
 	 **************************************************/
 	if(window.serial===undefined){
+		console.log("mockeando objeto serial");
 		serial = {
 			open: function(config, success_callback, err_callback){
 
