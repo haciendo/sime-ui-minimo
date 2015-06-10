@@ -110,11 +110,7 @@ $(function(){
 		);
 	};
 	
-	
-	
-	
-	
-	
+	console.log("pido permiso para usar serie...");
 	serial.requestPermission(
 		 function(successMessage) {
 			console.log("permiso concedido para usar puerto serie:", successMessage);
