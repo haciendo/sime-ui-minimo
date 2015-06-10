@@ -38,5 +38,8 @@ var DivConsola = {
 };
 
 $(function(){
-	if(window.isphone)	DivConsola.start();	
+	if(window.isphone) document.addEventListener("deviceready", function(){
+		DivConsola.start();
+		console.log("url", document.URL);
+	}, false);
 });

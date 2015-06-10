@@ -1,1 +1,1 @@
-window.isphone = (document.URL.indexOf("com.") > 0);
+window.isphone = true;// (document.URL.indexOf("com.") > 0);
