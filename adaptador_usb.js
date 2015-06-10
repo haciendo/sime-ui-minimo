@@ -55,6 +55,7 @@ $(function(){
 	 * FIN de Mock de objeto serial
 	 **************************************************/
 		
+	console.log("nueva version");
 	var abrirPuertoSerie = function(){
 		
 		serial.open (
@@ -112,6 +113,7 @@ $(function(){
 	};
 	
 	var pedirPermisoParaUsarSerie = function(){
+		console.log("nueva version");
 		console.log("pido permiso para usar serie...");
 		serial.requestPermission(
 			 function(successMessage) {
