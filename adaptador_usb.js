@@ -3,59 +3,57 @@ $(function(){
 	 * Mock del objeto serial
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-//	console.log("pregunto antes de mockear:", window.isphone);
-//	if(!window.isphone){
-//		console.log("mockeando objeto serial");
-//		serial = {
-//			open: function(config, success_callback, err_callback){
-//
-//				console.log("mock - serial.open");
-//
-//				console.log("config");
-//				console.log(config);
-//
-//				success_callback();
-//
-//			},
-//			write: function(data, success_callback, err_callback){
-//
-//				console.log("mock - serial.write");
-//
-//				console.log("data");
-//				console.log(data);
-//
-//				success_callback("success");
-//
-//			},
-//			registerReadCallback: function(read_callback, err_callback){
-//				console.log("mock - serial.registerReadCallback");
-//
-//
-//				setInterval(function(){
-//
-//					read_callback((Math.random() * 100.0).toFixed(3));
-//
-//				}, 3000);
-//			},
-//			requestPermission: function(success_callback, err_callback){
-//				console.log("mock - serial.requestPermission");
-//
-//				success_callback('success');
-//
-//			},
-//			close: function(success_callback, err_callback){
-//				console.log("mock - serial.close");
-//
-//				success_callback('success');
-//
-//			}
-//		};
-//	}
+	if(!window.isphone){
+		console.log("mockeando objeto serial");
+		serial = {
+			open: function(config, success_callback, err_callback){
+
+				console.log("mock - serial.open");
+
+				console.log("config");
+				console.log(config);
+
+				success_callback();
+
+			},
+			write: function(data, success_callback, err_callback){
+
+				console.log("mock - serial.write");
+
+				console.log("data");
+				console.log(data);
+
+				success_callback("success");
+
+			},
+			registerReadCallback: function(read_callback, err_callback){
+				console.log("mock - serial.registerReadCallback");
+
+
+				setInterval(function(){
+
+					read_callback((Math.random() * 100.0).toFixed(3));
+
+				}, 3000);
+			},
+			requestPermission: function(success_callback, err_callback){
+				console.log("mock - serial.requestPermission");
+
+				success_callback('success');
+
+			},
+			close: function(success_callback, err_callback){
+				console.log("mock - serial.close");
+
+				success_callback('success');
+
+			}
+		};
+	}
 	/**************************************************
 	 * FIN de Mock de objeto serial
 	 **************************************************/
 		
-	console.log("nueva version");
 	var abrirPuertoSerie = function(){
 		
 		serial.open (
@@ -113,7 +111,6 @@ $(function(){
 	};
 	
 	var pedirPermisoParaUsarSerie = function(){
-		console.log("nueva version");
 		console.log("pido permiso para usar serie...");
 		serial.requestPermission(
 			 function(successMessage) {
