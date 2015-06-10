@@ -110,21 +110,25 @@ $(function(){
 		);
 	};
 	
-	console.log("pido permiso para usar serie...");
-	serial.requestPermission(
-		 function(successMessage) {
-			console.log("permiso concedido para usar puerto serie:", successMessage);
-			serial.close(function(){
-				console.log("puerto serie cerrado");
-				abrirPuertoSerie();
-			}, function(err){
-				console.log("error al cerrar puerto serie");
-				abrirPuertoSerie();
-			});
-		},
-		function(err){
-			console.log("error al pedir permiso para usar puerto serie:", err);
-		}
-	);
+	var pedirPermisoParaUsarSerie = function(){
+		console.log("pido permiso para usar serie...");
+		serial.requestPermission(
+			 function(successMessage) {
+				console.log("permiso concedido para usar puerto serie:", successMessage);
+				serial.close(function(){
+					console.log("puerto serie cerrado");
+					abrirPuertoSerie();
+				}, function(err){
+					console.log("error al cerrar puerto serie");
+					abrirPuertoSerie();
+				});
+			},
+			function(err){
+				console.log("error al pedir permiso para usar puerto serie:", err);
+			}
+		);		
+	};
 	
+	if(window.isphone) document.addEventListener("deviceready", pedirPermisoParaUsarSerie, false);
+	else pedirPermisoParaUsarSerie();
 });

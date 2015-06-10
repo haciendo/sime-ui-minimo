@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "Sime.AdaptadorUsb"
+        id        = "Sime"
         versionCode="10" 
         version   = "1.0.0">
 
@@ -9,7 +9,7 @@
     <gap:platform name="android" />
     <preference name="phonegap-version"           value="3.7.0" />
         
-    <name>Sime.AdaptadorUsb</name>
+    <name>Sime</name>
 
     <description>
         
