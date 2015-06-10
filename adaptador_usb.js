@@ -87,7 +87,7 @@ $(function(){
 						// TODO:
 						// adaptar con dataFormated real
 						
-						
+						console.log("llego de instrumento:", dataString);
 						var mensaje = {
 							tipoDeMensaje:"medicion",
 							//valor: String.fromCharCode.apply(null, dataFormated),
