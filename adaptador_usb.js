@@ -77,20 +77,21 @@ $(function(){
 			
 				serial.registerReadCallback(
 					function(data){
-						console.log("data recibida:", data);
-						var dataArray = new Uint8Array(data);
-						console.log("data array:", dataArray);
-						var dataString = String.fromCharCode.apply(null, dataArray);
-						console.log("data string:", dataString);
-						
+						if(_.isString(data)) dataString = data;
+						else{
+							var dataArray = new Uint8Array(data);
+							var dataString = String.fromCharCode.apply(null, dataArray);
+						}
 						// Mensaje definido en:
 						// https://docs.google.com/document/d/1y0_301NuTZICPXeorPcrvl9MDEuBTutYIUK0CI5smXY/edit
 						// TODO:
 						// adaptar con dataFormated real
+						
+						
 						var mensaje = {
 							tipoDeMensaje:"medicion",
 							//valor: String.fromCharCode.apply(null, dataFormated),
-							valor: data,
+							valor: parseFloat(dataString).toString,
 							unidad:"cm"
 						}
 						
