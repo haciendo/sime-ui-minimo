@@ -28,6 +28,10 @@ var DivConsola = {
 			oldLog.apply(console, arguments);
 		};		
 		
+		window.onerror = function(e, url, line){
+			console.log("ERROR:", e, url, line);
+		}
+		
 		this.btnConsola = $("<input id='btn_consola' type='button' value='/'>");
 		$("body").append(this.btnConsola);
 		
