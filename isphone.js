@@ -1,1 +1,4 @@
-window.isphone = true;// (document.URL.indexOf("com.") > 0);
+window.isphone = false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	window.isphone = true;
+}
