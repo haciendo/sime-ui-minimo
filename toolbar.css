@@ -4,7 +4,7 @@
 	left:0px;
 	right:0px;
 	top:0px;
-	height:25px;
+	height:40px;
 	
 	background-color: rgb(246, 178, 107);
 }
@@ -14,16 +14,16 @@
 	position: absolute;
 	
 	top: 0px;
-	height: 25px;
-	width: 25px;
+	height: 40px;
+	width: 40px;
 }
 
 .custom_toolbar{
 	position: fixed;
 	top:0px;
-	right: 25px;
+	right: 40px;
 	left: 85px;
-	height:25px;
+	height:40px;
 	z-index:2;
 }
 
@@ -39,12 +39,11 @@
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	width: 90px;
+	width: 120px;
 	
 	display: none;
 	
 	background-color: rgb(200, 200, 200);
-	
 }
 
 #toolbar
@@ -52,7 +51,7 @@
 div.link_pantalla{
 	border: solid 1px;
 	
-	font-size: 9px;
+	font-size: 12px;
 	padding: 6px 1px 5px 5px;
 	
 	border-color: rgb(100,100,100);

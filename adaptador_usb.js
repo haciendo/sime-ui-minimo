@@ -1,59 +1,5 @@
 $(function(){
-	/**************************************************
-	 * Mock del objeto serial
-	 * borrar al implementar en phoneGap
-	 **************************************************/
-	if(!window.isphone){
-		console.log("mockeando objeto serial");
-		serial = {
-			open: function(config, success_callback, err_callback){
-
-				console.log("mock - serial.open");
-
-				console.log("config");
-				console.log(config);
-
-				success_callback();
-
-			},
-			write: function(data, success_callback, err_callback){
-
-				console.log("mock - serial.write");
-
-				console.log("data");
-				console.log(data);
-
-				success_callback("success");
-
-			},
-			registerReadCallback: function(read_callback, err_callback){
-				console.log("mock - serial.registerReadCallback");
-
-
-				setInterval(function(){
-
-					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
-
-				}, 3000);
-			},
-			requestPermission: function(success_callback, err_callback){
-				console.log("mock - serial.requestPermission");
-
-				success_callback('success');
-
-			},
-			close: function(success_callback, err_callback){
-				console.log("mock - serial.close");
-
-				success_callback('success');
-
-			}
-		};
-	}
-	/**************************************************
-	 * FIN de Mock de objeto serial
-	 **************************************************/
-		
+	
 	var buffer_entrada_serie = "";
 	var abrirPuertoSerie = function(){
 		serial.open (
@@ -86,7 +32,7 @@ $(function(){
 						buffer_entrada_serie += dataString;
 						var mensajes_en_buffer = buffer_entrada_serie.split('\n');
 						for(var i=0; i<mensajes_en_buffer.length-1; i++){
-							console.log("llego de instrumento:", mensajes_en_buffer[i]);
+							//console.log("llego de instrumento:", mensajes_en_buffer[i]);
 							// Mensaje definido en:
 							// https://docs.google.com/document/d/1y0_301NuTZICPXeorPcrvl9MDEuBTutYIUK0CI5smXY/edit
 							// TODO:

@@ -18,6 +18,9 @@ div.custom_toolbar
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
+	
+	border-top: solid 2px rgb(223, 164, 103);
+	
 }
 
 
@@ -36,5 +39,8 @@ li.medicion_item{
 	background-color: rgb(200,200,200);
 	color: rgb(70,70,70);
 	text-align: left;
+	height: 20px;
+	padding-top: 4px;
+	border-bottom: solid 1px rgb(190,190,190);
 }
 

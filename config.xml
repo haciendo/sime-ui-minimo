@@ -20,5 +20,5 @@
     </author>
         
     <access origin="*"/>
-    <gap:plugin name="fr.drangies.cordova.serial"/>    
+    <gap:plugin name="fr.drangies.cordova.serial"/>
 </widget>
