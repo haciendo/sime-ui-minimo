@@ -8,6 +8,18 @@ $(function() {
 });
 
 
+// eventos en show y hide
+(function ($) {
+	$.each(['show', 'hide'], function (i, ev) {
+		var el = $.fn[ev];
+		$.fn[ev] = function () {
+			this.trigger(ev);
+			return el.apply(this, arguments);
+		};
+	});
+})(jQuery);
+
+
 
 
 var datos = {
@@ -29,27 +41,6 @@ var onDeviceReady = function() {
 	Vx.when({tipoDeMensaje:"vortex.debug.error"}, function(m){console.log(m);})
 	
 	
-	// TEST de FileHelper.js
-	/*
-	var miFile = new FileHelper("la_pucha_file.txt", function(){
-		
-		
-		this.write(
-			"blablalba blablabla \r\n sdsddsdsdsd \r\n hola \r\n figarooo figaroo fiiiiiigaroooo",
-			function(){
-				
-				miFile.read(function(text){
-					console.log('esto es lo que se lee');
-					console.log(text);
-				});
-				
-			}
-		);
-	});
-	*/
-	//
-	
-	
 	toolbar();
 	
 	
@@ -64,9 +55,8 @@ var onDeviceReady = function() {
 	
 	/***************/
 	
-	if(window.plugin){
-		window.plugin.backgroundMode.enable();
-	}
+	window.plugins.backgroundMode.enable();
+	
 };
 
 

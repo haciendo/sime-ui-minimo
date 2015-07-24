@@ -111,7 +111,7 @@ $(function(){
 							file: function(success_callback, err_callback){
 								console.log('mock - fileEntry.file');
 								var file = {
-									
+									fullPath: '//mock-fileEntry.fullPath//'
 								};
 								success_callback(file);
 								
@@ -140,7 +140,7 @@ $(function(){
 
 	 
 	/**************************************************
-	 * Mock simulador de mediciones tomadas en el celu
+	 * Mock simulador de toma de mediciones en el celu
 	 * borrar al implementar en phoneGap
 	 **************************************************/
 	
@@ -173,6 +173,53 @@ $(function(){
 			});
 		}, 3000);
 	}
+	/**************************************************
+	 * FIN de Mock simulador de toma de mediciones en el celu
+	 **************************************************/
 	
-
+	/**************************************************
+	 * Mock simulador de plugines window.plugins...
+	 * borrar al implementar en phoneGap
+	 **************************************************/
+	if(!window.isphone){
+		
+		window.plugins = {
+			backgroundMode: {
+				enable: function(){
+					console.log('mock - window.plugins.bagroundMode.enable()');
+				}
+			},
+			
+			socialsharing: {
+				share: function(){
+					console.log('mock - window.plugins.socialsharing.share()');
+					console.log('arguments', arguments);
+					
+				}
+			}
+		}
+	}
+	/**************************************************
+	 * FIN de Mock simulador de plugines window.plugins...
+	 **************************************************/
+	
+	
+	/**************************************************
+	 * Mock simulador de navigator.app.exitApp();
+	 * borrar al implementar en phoneGap
+	 **************************************************/
+	if(!window.isphone){
+		navigator.app={
+			exitApp: function(){
+				location.reload();
+			}
+		}
+	}
+	/**************************************************
+	 * FIN de Mock simulador de navigator.app.exitApp();
+	 **************************************************/
+	
+	
+	
+	
 });

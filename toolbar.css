@@ -31,7 +31,9 @@
 #toolbar
 #options{
 	right: 0px;
+	background:url(img/options.png) no-repeat center center;
 }
+
 
 
 #toolbar

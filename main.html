@@ -27,7 +27,7 @@
 			<!-- BOTONES-->
 			
 			<div id="options" class="toolbar_button">
-				<img src="img/options.png"/>
+				
 			</div>
 			<div id="options_list">
 				<div id="link_pantalla_medicion" class="link_pantalla">
@@ -45,7 +45,7 @@
 		<div id="pantalla_medicion" class="pantalla">
 			<div class="custom_toolbar">
 				<div id="btn_lista_mediciones" class="toolbar_button">
-					<img src="img/list.png"/>
+					
 				</div>
 			</div>
 			
@@ -62,12 +62,16 @@
 					
 				</input>
 			</div>
+			
+			
+			<button onclick="window.plugins.socialsharing.share('Here is your PDF file', 'Your PDF', 'www/files/manual.pdf')">Share PDF</button>
+			
 			<input id="btn_exportar" type="button" value="Exportar" class="big_button"/>
 		</div>
 		<div id="pantalla_lista_mediciones" class="pantalla">
 			<div class="custom_toolbar">
 				<div id="share" class="toolbar_button">
-					<img src="img/share.png"/>
+					
 				</div>
 			</div>
 
@@ -98,6 +102,7 @@
 	
 	<script type="text/javascript" src="lib/moment.js"></script>
 	<script type="text/javascript" src="lib/snap.svg-min.js"></script>
+	<script type="text/javascript" src="lib/SocialSharing.js"></script>
 	
 	<script type="text/javascript" src="lib/DivConsola.js"></script>
 	<script type="text/javascript" src="lib/isphone.js"></script>

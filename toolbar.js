@@ -25,7 +25,7 @@ var toolbar = function(){
 	/********* options_list ITEMS ****************/
 	
 	$options_list.find('#link_salir').on('click', function(){
-		location.reload();
+		navigator.app.exitApp();
 	});
 	
 	$options_list.find('#link_pantalla_medicion').on('click', function(){

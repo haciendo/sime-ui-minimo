@@ -1,17 +1,28 @@
 var pantalla_exportar = function() {
-	
+	var self = this;
 	var ui = $('#pantalla_exportar');
+		
 	
-	ui.show();
+	
+	
+	ui.on('show', function(){
+		
+		self.defaultFileName = 'mediciones'+moment().format('__YYYY_MM_DD_hh_mm_ss') +'.txt';
+		ui.find("#fileName").attr('placeholder', self.defaultFileName);
+		
+	});
+	
 	
 	ui.find('#btn_exportar').on('click', function(){
 		var fileName = ui.find("#fileName").val();
 		
-		
 		if(fileName==""){
-			fileName = 'mediciones'+moment().format('__YYYY_MM_DD_hh_mm_ss') +'.txt';
+			fileName = self.defaultFileName;
 		}
 		
+		
+		//fileName= window.file.dataDirectory + fileName;
+		//fileName= "unDiretorio/" + fileName;
 		
 		
 		var lineas = _.map(datos.mediciones, function(item){
@@ -22,24 +33,20 @@ var pantalla_exportar = function() {
 		});
 		
 		
-		
 		var miFile = new FileHelper(fileName, function(){
-			
+			var self = this;
 			
 			var sTablaMediciones = lineas.join(';\r\n');
 			sTablaMediciones += ';\r\n';
 			
 			this.write(sTablaMediciones,
 				function(){
-					
-					console.log('escritura existosa');
-					//TODO:
-					// poner notificación de archivo descargado
+					window.plugins.socialsharing.share('Acá tenés el archivo', 'Archivito de mediciones', self.path);
 				}
 			);
 		});
 		
-		//
+		
 		
 		
 	});
