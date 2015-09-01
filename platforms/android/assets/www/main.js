@@ -55,7 +55,7 @@ var onDeviceReady = function() {
 	
 	/***************/
 	
-	window.plugins.backgroundMode.enable();
+	window.plugin.backgroundMode.enable();
 	
 };
 

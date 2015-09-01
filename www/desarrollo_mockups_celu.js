@@ -134,45 +134,44 @@ $(function(){
 	/**************************************************
 	 * FIN de Mock del sistema de archivos
 	 **************************************************/
-
-
-
-
-	 
+	
+	
+	
+	
+	
 	/**************************************************
 	 * Mock simulador de toma de mediciones en el celu
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-	
 	if(window.isphone){
 		setTimeout(function(){
-			alert('mando una medicion 1');
 			// DEBUG
 			Vx.send({
 				tipoDeMensaje:"medicion",
 				valor: 123,
 				unidad: "mm"
 			});
-			alert('mando una medicion 2');
 			Vx.send({
 				tipoDeMensaje:"medicion",
 				valor: 223,
 				unidad: "cm"
 			});
-			alert('mando una medicion 3 ');
 			Vx.send({
 				tipoDeMensaje:"medicion",
 				valor: 323,
 				unidad: "mm"
 			});
-			alert('mando una medicion 4');
 			Vx.send({
 				tipoDeMensaje:"medicion",
 				valor: 423,
 				unidad: "cm"
 			});
 		}, 3000);
+		
+		
 	}
+	
+	
 	/**************************************************
 	 * FIN de Mock simulador de toma de mediciones en el celu
 	 **************************************************/
@@ -183,7 +182,7 @@ $(function(){
 	 **************************************************/
 	if(!window.isphone){
 		
-		window.plugins = {
+		window.plugin = {
 			backgroundMode: {
 				enable: function(){
 					console.log('mock - window.plugins.bagroundMode.enable()');
