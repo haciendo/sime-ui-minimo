@@ -50,7 +50,8 @@ var onDeviceReady = function() {
 	pantalla_exportar();
 	
 	/* START POINT */
-	$('#link_pantalla_medicion').click();
+	$('.pantalla').hide();
+	$('#pantalla_medicion').show();
 	
 	
 	/***************/

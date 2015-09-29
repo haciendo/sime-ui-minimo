@@ -1,5 +1,6 @@
 body{
 	font-family: arial;
+	background-color: rgb(246, 178, 107);
 }
 
 ul {
@@ -21,13 +22,3 @@ div.pantalla{
 	background-color: rgb(246, 178, 107);
 }
 
-#marca_sime{
-	z-index: 1;
-	
-	font-size: 40px;
-	color: white;
-	font-weight: bold;
-	position: absolute;
-	left: 1px;
-	top: -2px;
-}

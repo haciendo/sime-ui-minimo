@@ -14,12 +14,29 @@ var gestor_medicion = {
 				unidad				: mensaje.unidad
 			};
 			
-			
+			// DB: SE GUARDA EL DATO
 			datos.mediciones.push(medicion);
-			
+			////
 			
 			self.onMedicion(medicion);
 		});
+		
+		
+		Vx.when({
+			tipoDeMensaje:"medicionTiempoReal"
+
+		},function(mensaje){
+			
+			var medicion = {
+				valor				: mensaje.valor,
+				unidad				: mensaje.unidad
+			};
+			
+			
+			self.onMedicionTiempoReal(medicion);
+		});
+		
+		
 	},
 	onMedicion_vEventos: [],
 	onMedicion: function(param){
@@ -27,6 +44,16 @@ var gestor_medicion = {
 			this.onMedicion_vEventos.push(param);
 		}else{
 			_.each(this.onMedicion_vEventos, function(evento){
+				evento(param);
+			});
+		}
+	},
+	onMedicionTiempoReal_vEventos: [],
+	onMedicionTiempoReal: function(param){
+		if(typeof param == "function"){
+			this.onMedicionTiempoReal_vEventos.push(param);
+		}else{
+			_.each(this.onMedicionTiempoReal_vEventos, function(evento){
 				evento(param);
 			});
 		}

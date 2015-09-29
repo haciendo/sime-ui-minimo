@@ -45,8 +45,7 @@
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />
-	<gap:plugin name="fr.drangies.cordova.serial"/>
+    <gap:plugin name="fr.drangies.cordova.serial"/>
 	<gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
 	<gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.5.0"/>
 	

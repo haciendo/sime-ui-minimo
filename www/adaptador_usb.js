@@ -37,11 +37,15 @@ $(function(){
 							// https://docs.google.com/document/d/1y0_301NuTZICPXeorPcrvl9MDEuBTutYIUK0CI5smXY/edit
 							// TODO:
 							// adaptar con dataFormated real
+							
+							// TODO: distinguir la marca de tiempo real
+							
 							var mensaje = {
 								tipoDeMensaje:"medicion",
 								valor: mensajes_en_buffer[i].split(' ')[0],
 								unidad: mensajes_en_buffer[i].split(' ')[1]
-							}							
+							};
+							
 							Vx.send(mensaje);
 						}
 						buffer_entrada_serie = mensajes_en_buffer[mensajes_en_buffer.length-1];

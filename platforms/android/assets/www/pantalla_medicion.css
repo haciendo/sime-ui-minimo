@@ -1,4 +1,22 @@
 #pantalla_medicion
+.custom_toolbar{
+	right: 40px;
+}
+
+
+#pantalla_medicion
+#overlay_medicion{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgb(255,255,255);
+	display:none;
+}
+
+
+#pantalla_medicion
 #valorMedicion{
 	position: absolute;
 	width: 100%;
@@ -10,6 +28,8 @@
 	font-weight: bold;
 	
 }
+
+
 
 
 #pantalla_medicion

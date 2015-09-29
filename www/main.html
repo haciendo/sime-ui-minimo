@@ -16,69 +16,67 @@
         <link rel="stylesheet" href="pantalla_configuracion.css" />
         <link rel="stylesheet" href="pantalla_exportar.css" />
 		
+		
         
 		<title>SIME - UI Minimo</title>
 	</head>
 	
 	<body>
-		<div id="toolbar">
-			<div id="marca_sime">SIME</div>
-			
-			<!-- BOTONES-->
-			
-			<div id="options" class="toolbar_button">
-				
-			</div>
-			<div id="options_list">
-				<div id="link_pantalla_medicion" class="link_pantalla">
-					Medicion
-				</div>
-				<div id="link_pantalla_configuracion" class="link_pantalla">
-					Configuracion
-				</div>
-				<div id="link_salir" class="link_pantalla">
-					Salir
-				</div>
-			</div>
-		</div>
-		
 		<div id="pantalla_medicion" class="pantalla">
 			<div class="custom_toolbar">
-				<div id="btn_lista_mediciones" class="toolbar_button">
-					
-				</div>
+				<div id="btn_lista_mediciones" class="toolbar_button"></div>
 			</div>
+			<div id="overlay_medicion"></div>
 			
 			<div id="valorMedicion">
 				00.000
 			</div>
 		</div>
 		<div id="pantalla_configuracion" class="pantalla">
+			<div class="custom_toolbar">
+				<div class="toolbar_button medir" ></div>
+			</div>
 			pantalla_configuracion en Construccion
 		</div>
 		<div id="pantalla_exportar" class="pantalla">
+			<div class="custom_toolbar">
+				<div class="toolbar_button medir" ></div>
+			</div>
 			<div id="fileName_container">
 				<input id="fileName" placeholder="archivo.txt">
 					
 				</input>
 			</div>
 			
-			
-			<button onclick="window.plugins.socialsharing.share('Here is your PDF file', 'Your PDF', 'www/files/manual.pdf')">Share PDF</button>
-			
-			<input id="btn_exportar" type="button" value="Exportar" class="big_button"/>
+			<div id="btn_exportar"> Exportar y compartir</div>
 		</div>
 		<div id="pantalla_lista_mediciones" class="pantalla">
 			<div class="custom_toolbar">
-				<div id="share" class="toolbar_button">
-					
-				</div>
+				<div class="toolbar_button medir" ></div>
+				<div id="share" class="toolbar_button"></div>
 			</div>
 
 			<div id="lista_mediciones">
 				<ul>
 					
 				</ul>
+			</div>
+		</div>
+		<div id="toolbar">
+			<div id="marca_sime">SIME</div>
+			
+			<div id="options" class="toolbar_button"></div>
+			
+		</div>
+		<div id="brillo_toolbar">
+			<div id="brillo_toolbar_centro"></div>
+		</div>
+		<div id="options_list">
+			<div id="link_pantalla_configuracion" class="link_pantalla">
+				Configuracion
+			</div>
+			<div id="link_salir" class="link_pantalla">
+				Salir
 			</div>
 		</div>
 		

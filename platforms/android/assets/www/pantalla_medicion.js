@@ -13,6 +13,17 @@ var pantalla_medicion = function() {
 	
 	gestor_medicion.onMedicion(function(medicion){
 		ui.find('#valorMedicion').text(medicion.valor + ' ' +  medicion.unidad);
+		
+		
+		var overlay = ui.find('#overlay_medicion')
+		overlay.show();
+		overlay.css({opacity: 1});
+		
+		overlay.animate({
+			opacity: 0
+		}, 600, function(){
+			overlay.hide();
+		});
+		
 	});
-	
 };

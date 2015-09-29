@@ -186,6 +186,9 @@ $(function(){
 			backgroundMode: {
 				enable: function(){
 					console.log('mock - window.plugins.bagroundMode.enable()');
+				},
+				disable: function(){
+					console.log('mock - window.plugins.bagroundMode.disable()');
 				}
 			},
 			

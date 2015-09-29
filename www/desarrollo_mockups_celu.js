@@ -32,14 +32,17 @@ $(function(){
 			registerReadCallback: function(read_callback, err_callback){
 				console.log("mock - serial.registerReadCallback");
 
+				///// TO DO:
+				/*
 				
+				*/
 				
 				read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
 				
 				setInterval(function(){
 
 					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
-
+					
 				}, 3000);
 			},
 			requestPermission: function(success_callback, err_callback){
@@ -186,6 +189,9 @@ $(function(){
 			backgroundMode: {
 				enable: function(){
 					console.log('mock - window.plugins.bagroundMode.enable()');
+				},
+				disable: function(){
+					console.log('mock - window.plugins.bagroundMode.disable()');
 				}
 			},
 			
