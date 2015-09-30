@@ -32,15 +32,33 @@ $(function(){
 			registerReadCallback: function(read_callback, err_callback){
 				console.log("mock - serial.registerReadCallback");
 
-				
-				
-				read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
+				///// TO DO:
+				/*
+				envíar mensajes de medicionTiempoReal y medicion
+				*/
 				
 				setInterval(function(){
 
 					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
-
+					console.log("mock - read_callback medicion");
 				}, 3000);
+				
+				var iSenoMock = 0
+				
+				setInterval(function(){
+					
+					read_callback(((Math.sin(iSenoMock/180*Math.PI) * 200.0) - 100).toFixed(3)+" mm tr\n");
+					
+					iSenoMock++;
+					
+					if(iSenoMock>180){
+						iSenoMock=0;
+					}
+					
+				}, 100);
+				
+				
+				
 			},
 			requestPermission: function(success_callback, err_callback){
 				console.log("mock - serial.requestPermission");

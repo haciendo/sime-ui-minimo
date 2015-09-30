@@ -32,17 +32,22 @@ $(function(){
 						buffer_entrada_serie += dataString;
 						var mensajes_en_buffer = buffer_entrada_serie.split('\n');
 						for(var i=0; i<mensajes_en_buffer.length-1; i++){
-							//console.log("llego de instrumento:", mensajes_en_buffer[i]);
-							// Mensaje definido en:
-							// https://docs.google.com/document/d/1y0_301NuTZICPXeorPcrvl9MDEuBTutYIUK0CI5smXY/edit
-							// TODO:
-							// adaptar con dataFormated real
-							var mensaje = {
-								tipoDeMensaje:"medicion",
-								valor: mensajes_en_buffer[i].split(' ')[0],
-								unidad: mensajes_en_buffer[i].split(' ')[1]
-							}							
-							Vx.send(mensaje);
+							
+							var sep = " ";
+							
+							var _tipoDeMensaje;
+							if(mensajes_en_buffer[i].split(sep)[2]=="tr"){
+								_tipoDeMensaje = "medicionTiempoReal";
+							}else{
+								_tipoDeMensaje = "medicion";
+							}
+							
+							Vx.send({
+								tipoDeMensaje: _tipoDeMensaje,
+								valor: mensajes_en_buffer[i].split(sep)[0],
+								unidad: mensajes_en_buffer[i].split(sep)[1]
+							});
+							
 						}
 						buffer_entrada_serie = mensajes_en_buffer[mensajes_en_buffer.length-1];
 						

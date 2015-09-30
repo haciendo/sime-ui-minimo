@@ -11,11 +11,19 @@ var pantalla_medicion = function() {
 	/***************************/
 	
 	
+	
+	
+	gestor_medicion.onMedicionTiempoReal(function(medicion){
+		ui.find('#valorMedicion').text(medicion.valor + ' ' +  medicion.unidad);
+	});
+	
+	
 	gestor_medicion.onMedicion(function(medicion){
 		ui.find('#valorMedicion').text(medicion.valor + ' ' +  medicion.unidad);
 		
 		
-		var overlay = ui.find('#overlay_medicion')
+		var overlay = ui.find('#overlay_medicion');
+		
 		overlay.show();
 		overlay.css({opacity: 1});
 		
