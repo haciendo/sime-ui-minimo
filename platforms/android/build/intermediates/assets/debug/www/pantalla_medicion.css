@@ -1,0 +1,59 @@
+#pantalla_medicion
+.custom_toolbar{
+	right: 40px;
+}
+
+
+#pantalla_medicion
+#overlay_medicion{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgb(255,255,255);
+	display:none;
+}
+
+
+#pantalla_medicion
+#valorMedicion{
+	position: absolute;
+	width: 98%;
+	top: 50px;
+	
+	text-align: center;
+	color: rgb(50, 50, 50);
+	font-size: 100px;
+	font-weight: bold;
+	display: none;
+	
+}
+
+
+#pantalla_medicion
+#valorMedicionTiempoReal{
+	position: absolute;
+	right: 10px;
+	left: 10px;
+	bottom: 50px;
+	
+	color: rgb(50, 50, 50);
+	font-size: 60px;
+	font-weight: bold;
+	
+}
+
+
+
+#pantalla_medicion
+#btn_lista_mediciones{
+	right: 0px;
+}
+
+#pantalla_medicion
+div.custom_toolbar
+#btn_lista_mediciones{
+	right: 0px;
+	background:url(img/list.png) no-repeat center center;
+}

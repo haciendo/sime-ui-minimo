@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="431d3885a90b9b991b99197228da901245fbdd5f">
+        <dex dex="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\pre-dexed\debug\classes-904d3a755dd1a6b14d762971767de8f1cb2c975a.jar" />
+    </item>
+    <item
+        jar="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bc202617b4cfed6673b1e10d87e52c78f7a6de38">
+        <dex dex="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\pre-dexed\debug\android-support-v4-00e6eb21b6a93de57cc80edd61a8bd3b5f68afd5.jar" />
+    </item>
+    <item
+        jar="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\libs\usbseriallibrary.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a71ca0882447a511cd4ea204bae6c0550eac550b">
+        <dex dex="C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\pre-dexed\debug\usbseriallibrary-bd2b2c0e511f1173a40697526d9f2475b145e69e.jar" />
+    </item>
+
+</items>

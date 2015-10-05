@@ -1,0 +1,119 @@
+
+
+#toolbar{
+	z-index: 1;
+	position: absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	height:40px;
+	border-bottom: solid 2px rgb(255, 255, 255);
+	background-color: rgb(246, 178, 107);
+	overflow: hidden;
+}
+
+
+#marca_sime{
+	
+	font-size: 35px;
+	color: white;
+	position: absolute;
+	
+	text-align: center;
+    width: 90px;
+	
+	left: 1px;
+	top: -2px;
+	text-shadow: 0 0 5px rgb(250,250,250);
+	transition:text-shadow 0.5s ease-in-out;
+	-webkit-transition:text-shadow 0.5s ease-in-out;
+}
+#marca_sime.iluminado{
+	text-shadow: 0 0 30px rgb(255,255,255);
+	transition:text-shadow 0.5s ease-in-out;
+	-webkit-transition:text-shadow 0.5s ease-in-out;
+	font-weight: bold; 
+}
+#brillo_toolbar{
+	z-index: 1;
+	position: absolute;
+	left:0px;
+	top:40px;
+	height:0px;
+	width: 60px;
+	border: solid 1px rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 20px 1px rgba(255,255,255,1);
+	display: none;
+}
+#brillo_toolbar
+#brillo_toolbar_centro{
+	z-index: 2;
+	position: absolute;
+	left:50%;
+	top:-1px;
+	height:0px;
+	
+	width: 6px;
+	margin-left: -3px;
+	
+	border: solid 1px rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 30px 10px rgba(255,255,255,1);
+}
+.toolbar_button{
+	position: absolute;
+	
+	top: 0px;
+	height: 40px;
+	width: 40px;
+}
+
+.custom_toolbar{
+	position: absolute;
+	top:-40px;
+	right: 40px;
+	left: 85px;
+	height:40px;
+	z-index:2;
+}
+
+
+#toolbar
+#options{
+	position: absolute;
+	
+	right: 0px;
+	background:url(img/options.png) no-repeat center center;
+}
+
+.custom_toolbar
+.medir{
+	position: absolute;
+	
+	right: 0px;
+	background:url(img/medir.png) no-repeat center center;
+}
+
+
+#options_list{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 120px;
+	z-index:3;
+	display: none;
+	
+	background-color: rgb(200, 200, 200);
+}
+
+#options_list
+div.link_pantalla{
+	border: solid 1px;
+	z-index:4;
+	
+	font-size: 15px;
+	padding: 6px 1px 5px 5px;
+	
+	border-color: rgb(100,100,100);
+}

@@ -1,0 +1,60 @@
+#pantalla_exportar{
+	text-align: center;
+}
+
+#pantalla_exportar
+#btn_exportar{
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	border: solid 2px rgb(255, 255, 255);
+	border-radius: 5px;
+	background-color: transparent;
+	
+	position: absolute;
+	width: 200px;
+	height: 25px;
+	margin-left: -100px;
+	left: 50%;
+	bottom: 25px;
+	padding: 10px 0px 0px 0px;
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+
+#pantalla_exportar
+#btn_exportar.btn_presionado{
+	color: rgb(246, 178, 107);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 20px 8px rgba(255,255,255,1);
+}
+
+
+
+
+
+
+
+#pantalla_exportar
+#fileName_container{
+	
+	border: solid 1px rgb(190, 169, 147);
+	background-color: rgb(252, 222, 147);
+	
+	position: absolute;
+	height: 25px;
+	left: 25px;
+	right: 25px;
+	top: 30%;
+}
+
+#pantalla_exportar
+#fileName{
+	border: transparent;
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+	
+}
+

@@ -1,0 +1,3 @@
+C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\classes\debug
+C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\pre-dexed\debug\usbseriallibrary-bd2b2c0e511f1173a40697526d9f2475b145e69e.jar
+C:\Personal\Experimentos\SIME\phonegap\sime-minimo\platforms\android\build\intermediates\pre-dexed\debug\classes-904d3a755dd1a6b14d762971767de8f1cb2c975a.jar
