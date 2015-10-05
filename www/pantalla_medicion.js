@@ -14,24 +14,38 @@ var pantalla_medicion = function() {
 	
 	
 	gestor_medicion.onMedicionTiempoReal(function(medicion){
-		ui.find('#valorMedicion').text(medicion.valor + ' ' +  medicion.unidad);
+		ui.find('#valorMedicionTiempoReal').text(medicion.valor + ' ' +  medicion.unidad);
 	});
 	
 	
 	gestor_medicion.onMedicion(function(medicion){
-		ui.find('#valorMedicion').text(medicion.valor + ' ' +  medicion.unidad);
+		var valorMedicion = ui.find('#valorMedicion');
 		
+		valorMedicion.text(medicion.valor + ' ' +  medicion.unidad);
+		valorMedicion.show();
 		
-		var overlay = ui.find('#overlay_medicion');
+		var overlay = ui.find('#overlay_medicion, #valorMedicion');
 		
 		overlay.show();
 		overlay.css({opacity: 1});
 		
 		overlay.animate({
 			opacity: 0
-		}, 600, function(){
+		}, 2000, function(){
 			overlay.hide();
+
 		});
+		
+		
+		var valorMedicionTiempoReal = ui.find('#valorMedicionTiempoReal');
+		
+		valorMedicionTiempoReal.show();
+		valorMedicionTiempoReal.css({opacity: 0});
+		
+		valorMedicionTiempoReal.animate({
+			opacity: 0.9
+		}, 2000);
+		
 		
 	});
 };
