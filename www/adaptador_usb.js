@@ -30,7 +30,7 @@ $(function(){
 						}
 						
 						buffer_entrada_serie += dataString;
-						var mensajes_en_buffer = buffer_entrada_serie.split('\n');
+						var mensajes_en_buffer = buffer_entrada_serie.split(/\r?\n/);
 						for(var i=0; i<mensajes_en_buffer.length-1; i++){
 							
 							var sep = " ";
