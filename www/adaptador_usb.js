@@ -9,18 +9,21 @@ $(function(){
 			function(successMessage) {
 				console.log("puerto serie abierto:", successMessage);
 				
-				/*
-				serial.write(
-					"1",
-					function(successMessage) {
-						console.log(successMessage);
-					},
-					function(err){
-						console.log("error al enviar por puerto serie:", err);
-					}
-				);	
-				*/
-			
+				var id_intervalo_keep_alive = setInterval(function(){
+					serial.write(
+						"T",
+						function(successMessage) {
+							console.log("instrumento conectado");
+						},
+						function(err){
+							console.log("instrumento desconectado");
+							clearInterval(id_intervalo_keep_alive);	
+							Vx.send({tipoDeMensaje: "instrumentoDesconectado"});
+							setTimeout(pedirPermisoParaUsarSerie, 1000);
+						}
+					);	
+				}, 2000);
+				
 				serial.registerReadCallback(
 					function(data){
 						if(_.isString(data)) dataString = data;
@@ -54,6 +57,7 @@ $(function(){
 					},
 					function(err){
 						console.log("error al registrar callback:", err);
+						setTimeout(pedirPermisoParaUsarSerie, 1000);
 					}
 				);
 			},
@@ -61,6 +65,7 @@ $(function(){
 			
 			function(err){
 				console.log("error al abrir puerto serie:", err);
+				setTimeout(pedirPermisoParaUsarSerie, 1000);
 			}
 		);
 	};
@@ -80,6 +85,7 @@ $(function(){
 			},
 			function(err){
 				console.log("error al pedir permiso para usar puerto serie:", err);
+				setTimeout(pedirPermisoParaUsarSerie, 1000);
 			}
 		);		
 	};
