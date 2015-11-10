@@ -41,7 +41,7 @@ $(function(){
 
 					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
 					console.log("mock - read_callback medicion");
-				}, 3000);
+				}, 9000);
 				
 				var iSenoMock = 0
 				

@@ -31,7 +31,7 @@ var pantalla_medicion = function() {
 		
 		overlay.animate({
 			opacity: 0
-		}, 2000, function(){
+		}, 3000, function(){
 			overlay.hide();
 
 		});
@@ -43,8 +43,12 @@ var pantalla_medicion = function() {
 		valorMedicionTiempoReal.css({opacity: 0});
 		
 		valorMedicionTiempoReal.animate({
+			opacity: 0.1
+		}, 3000);
+		
+		valorMedicionTiempoReal.animate({
 			opacity: 0.9
-		}, 2000);
+		}, 500);
 		
 		
 	});
