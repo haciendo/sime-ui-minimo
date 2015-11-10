@@ -12,11 +12,13 @@ var pantalla_medicion = function() {
 	
 	
 	
-	
 	gestor_medicion.onMedicionTiempoReal(function(medicion){
 		ui.find('#valorMedicionTiempoReal').text(medicion.valor + ' ' +  medicion.unidad);
 	});
 	
+	Vx.when({tipoDeMensaje: "instrumentoDesconectado"}, function(){
+		ui.find('#valorMedicionTiempoReal').text("--.--");
+	});
 	
 	gestor_medicion.onMedicion(function(medicion){
 		var valorMedicion = ui.find('#valorMedicion');
