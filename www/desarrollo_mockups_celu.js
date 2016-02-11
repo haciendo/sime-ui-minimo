@@ -5,7 +5,7 @@ $(function(){
 	 * Mock del objeto serial
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-		
+//		
 	if(!window.isphone){
 		console.log("mockeando objeto serial");
 		serial = {
@@ -161,33 +161,33 @@ $(function(){
 	 * Mock simulador de toma de mediciones en el celu
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-	if(window.isphone){
-		setTimeout(function(){
-			// DEBUG
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 123,
-				unidad: "mm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 223,
-				unidad: "cm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 323,
-				unidad: "mm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 423,
-				unidad: "cm"
-			});
-		}, 3000);
-		
-		
-	}
+//	if(window.isphone){
+//		setTimeout(function(){
+//			// DEBUG
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 123,
+//				unidad: "mm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 223,
+//				unidad: "cm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 323,
+//				unidad: "mm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 423,
+//				unidad: "cm"
+//			});
+//		}, 3000);
+//		
+//		
+//	}
 	
 	
 	/**************************************************

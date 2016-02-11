@@ -34,12 +34,12 @@
 #pantalla_medicion
 #valorMedicionTiempoReal{
 	position: absolute;
-	right: 10px;
-	left: 10px;
-	bottom: 50px;
+	width: 98%;
+	top: 50px;
 	
+	text-align: center;
 	color: rgb(50, 50, 50);
-	font-size: 60px;
+	font-size: 100px;
 	font-weight: bold;
 	
 }
