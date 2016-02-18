@@ -37,6 +37,7 @@ $(function(){
 				envíar mensajes de medicionTiempoReal y medicion
 				*/
 				
+<<<<<<< HEAD
 //				setInterval(function(){
 //
 //					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
@@ -57,6 +58,28 @@ $(function(){
 //					
 //				}, 100);
 //				
+=======
+				setInterval(function(){
+
+					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
+					console.log("mock - read_callback medicion");
+				}, 9000);
+				
+				var iSenoMock = 0
+				
+				setInterval(function(){
+					
+					read_callback(((Math.sin(iSenoMock/180*Math.PI) * 200.0) - 100).toFixed(3)+" mm tr\n");
+					
+					iSenoMock++;
+					
+					if(iSenoMock>180){
+						iSenoMock=0;
+					}
+					
+				}, 100);
+				
+>>>>>>> ad998b955195f184b6e79aceb76bbaab80fe7cb8
 				
 				
 			},
