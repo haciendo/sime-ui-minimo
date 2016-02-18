@@ -13,7 +13,7 @@ $(function(){
 					serial.write(
 						"T",
 						function(successMessage) {
-							console.log("instrumento conectado");
+							//console.log("instrumento conectado");
 						},
 						function(err){
 							console.log("instrumento desconectado");

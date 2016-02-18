@@ -5,69 +5,69 @@ $(function(){
 	 * Mock del objeto serial
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-		
+//		
 	if(!window.isphone){
 		console.log("mockeando objeto serial");
 		serial = {
 			open: function(config, success_callback, err_callback){
 
-				console.log("mock - serial.open");
+				//console.log("mock - serial.open");
 
-				console.log("config");
-				console.log(config);
+				//console.log("config");
+				//console.log(config);
 
 				success_callback();
 
 			},
 			write: function(data, success_callback, err_callback){
 
-				console.log("mock - serial.write");
+				//console.log("mock - serial.write");
 
-				console.log("data");
-				console.log(data);
+				//console.log("data");
+				//console.log(data);
 
 				success_callback("success");
 
 			},
 			registerReadCallback: function(read_callback, err_callback){
-				console.log("mock - serial.registerReadCallback");
+				//console.log("mock - serial.registerReadCallback");
 
 				///// TO DO:
 				/*
 				envíar mensajes de medicionTiempoReal y medicion
 				*/
 				
-				setInterval(function(){
-
-					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
-					console.log("mock - read_callback medicion");
-				}, 3000);
-				
-				var iSenoMock = 0
-				
-				setInterval(function(){
-					
-					read_callback(((Math.sin(iSenoMock/180*Math.PI) * 200.0) - 100).toFixed(3)+" mm tr\n");
-					
-					iSenoMock++;
-					
-					if(iSenoMock>180){
-						iSenoMock=0;
-					}
-					
-				}, 100);
-				
+//				setInterval(function(){
+//
+//					read_callback(((Math.random() * 200.0) - 100).toFixed(3)+" mm\n");
+//					console.log("mock - read_callback medicion");
+//				}, 9000);
+//				
+//				var iSenoMock = 0
+//				
+//				setInterval(function(){
+//					
+//					read_callback(((Math.sin(iSenoMock/180*Math.PI) * 200.0) - 100).toFixed(3)+" mm tr\n");
+//					
+//					iSenoMock++;
+//					
+//					if(iSenoMock>180){
+//						iSenoMock=0;
+//					}
+//					
+//				}, 100);
+//				
 				
 				
 			},
 			requestPermission: function(success_callback, err_callback){
-				console.log("mock - serial.requestPermission");
+				//console.log("mock - serial.requestPermission");
 
 				success_callback('success');
 				
 			},
 			close: function(success_callback, err_callback){
-				console.log("mock - serial.close");
+				//console.log("mock - serial.close");
 
 				success_callback('success');
 				
@@ -161,33 +161,33 @@ $(function(){
 	 * Mock simulador de toma de mediciones en el celu
 	 * borrar al implementar en phoneGap
 	 **************************************************/
-	if(window.isphone){
-		setTimeout(function(){
-			// DEBUG
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 123,
-				unidad: "mm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 223,
-				unidad: "cm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 323,
-				unidad: "mm"
-			});
-			Vx.send({
-				tipoDeMensaje:"medicion",
-				valor: 423,
-				unidad: "cm"
-			});
-		}, 3000);
-		
-		
-	}
+//	if(window.isphone){
+//		setTimeout(function(){
+//			// DEBUG
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 123,
+//				unidad: "mm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 223,
+//				unidad: "cm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 323,
+//				unidad: "mm"
+//			});
+//			Vx.send({
+//				tipoDeMensaje:"medicion",
+//				valor: 423,
+//				unidad: "cm"
+//			});
+//		}, 3000);
+//		
+//		
+//	}
 	
 	
 	/**************************************************

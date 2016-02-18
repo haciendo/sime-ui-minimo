@@ -48,6 +48,7 @@ var onDeviceReady = function() {
 	pantalla_lista_mediciones();
 	pantalla_configuracion();
 	pantalla_exportar();
+	pantalla_instrumentos();
 	
 	/* START POINT */
 	$('.pantalla').hide();
