@@ -21,6 +21,7 @@ var NodoConectorSocketNativo = function(opt){
 	this.socket.onclose = function(){
 		if(this.verbose) console.log('socket ' + this.id + ' desconectado');
 		_this.desconectarDe(_this.vecino);
+        _this.alDesconectar();
 	};
 	this.socket.onopen = function(){ 
 		if(this.verbose) console.log('socket ' + this.id + ' conectado');

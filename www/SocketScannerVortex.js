@@ -16,8 +16,12 @@ var SocketScannerVortex = {
         ipHigh = +ipHigh;
     
         function tryOne(ip) {
-            ++numInFlight;
             var address = "ws://" + ipBase + ip + ":" + port;
+            if(conectores[address]) {
+                next();
+                return;
+            }
+            ++numInFlight;
             var socket = new WebSocket(address);
             var timer = setTimeout(function() {
                 //console.log(address + " timeout");
@@ -31,8 +35,15 @@ var SocketScannerVortex = {
                 if (socket) {
                     console.log(address + " success");
                     clearTimeout(timer);
-                    conector = new NodoConectorSocketNativo({socket:socket, verbose: _this.verbose});
+                    conector = new NodoConectorSocketNativo({
+                        socket:socket, 
+                        verbose: _this.verbose,
+                        alDesconectar: function(){
+                            delete conectores[address]; 
+                        }
+                    });
 			        Vx.conectarCon(conector);
+                    conectores[address] = conector;
                     --numInFlight;
                     next();
                 }
