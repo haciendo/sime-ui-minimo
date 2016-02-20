@@ -3,12 +3,10 @@ var SocketScannerVortex = {
         var _this = this;
 		this.verbose = opt.verbose || false;
 		this.conectores = {};
-        this.getRangoIpLocal(function(rango){
-            _this.findServers(81, rango, 1, 255, 40, 1000);
-        });
-        window.onerror = function(msg, url, line, col, error) {
-            return true;
-        };
+//        this.getRangoIpLocal(function(rango){
+//            _this.findServers(81, rango, 1, 255, 40, 10000);
+//        });
+		this.buscarNodos();
 	},
     findServers: function (port, ipBase, ipLow, ipHigh, maxInFlight, timeout) {
         var _this = this;
@@ -17,14 +15,14 @@ var SocketScannerVortex = {
     
         function tryOne(ip) {
             var address = "ws://" + ipBase + ip + ":" + port;
-            if(conectores[address]) {
+            if(_this.conectores[address]) {
                 next();
                 return;
             }
             ++numInFlight;
-            var socket = new WebSocket(address);
+            var socket = new WebSocket(address, ['mensaje_vortex']);
             var timer = setTimeout(function() {
-                //console.log(address + " timeout");
+                console.log(address + " timeout");
                 var s = socket;
                 socket = null;
                 s.close();
@@ -70,25 +68,25 @@ var SocketScannerVortex = {
     
         next();
     },
-//	intentarConectarConServer: function(url, onError){
-//		var _this = this;
-//		var ws = new WebSocket("ws:" + url + ":81", ['mensaje_vortex']); 
-//		ws.onopen = function(){ 
-//			conector = new NodoConectorSocketNativo({socket:ws, verbose: _this.verbose});
-//			Vx.conectarCon(conector);
-//			_this.conectores[url] = conector;
-//		};		
-//	},
-//	buscarNodos: function(){
-//		var _this = this;
-//		this.intentarConectarConServer('192.168.4.1');
-//		//Vx.conectarCon(new NodoConectorSocket('192.168.4.1'));
-//		//_this.conectarConAdaptador('192.168.4.1');
-//		for(var i=0; i<256; i++){
-//			//_this.conectarConAdaptador('192.168.1.' + i);
-//			this.intentarConectarConServer('192.168.1.' + i);
-//		}	
-//	},
+	intentarConectarConServer: function(url, onError){
+		var _this = this;
+		var ws = new WebSocket("ws:" + url + ":81", ['mensaje_vortex']); 
+		ws.onopen = function(){ 
+			conector = new NodoConectorSocketNativo({socket:ws, verbose: _this.verbose});
+			Vx.conectarCon(conector);
+			_this.conectores[url] = conector;
+		};		
+	},
+	buscarNodos: function(){
+		var _this = this;
+		this.intentarConectarConServer('192.168.4.1');
+		//Vx.conectarCon(new NodoConectorSocket('192.168.4.1'));
+		//_this.conectarConAdaptador('192.168.4.1');
+		for(var i=0; i<256; i++){
+			//_this.conectarConAdaptador('192.168.1.' + i);
+			this.intentarConectarConServer('192.168.0.' + i);
+		}	
+	},
     getRangoIpLocal: function(cb){
         window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;   //compatibility for firefox and chrome
         var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){};      
