@@ -58,10 +58,7 @@ var toolbar = function(){
 		window.plugin.backgroundMode.disable();
 		navigator.app.exitApp();
 	});
-	
-	
-	
-	
+
 	$options_list.find('#link_pantalla_configuracion').on('click', function(){
 		$options_list.hide();
 		
@@ -69,6 +66,12 @@ var toolbar = function(){
 		$('#pantalla_configuracion').show();
 	});
 	
+    $options_list.find('#link_pantalla_instrumentos').on('click', function(){
+		$options_list.hide();
+		
+		$('.pantalla').hide();
+		$('#pantalla_instrumentos').show();
+	});
 	/*************************/
 	
 };

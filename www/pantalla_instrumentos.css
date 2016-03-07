@@ -1,0 +1,46 @@
+#pantalla_instrumentos{
+	text-align: center;
+	padding-top: 50px;
+}
+
+#pantalla_instrumentos
+div.custom_toolbar
+#scan{
+	right: 40px;
+	background:url(img/scan.png) no-repeat center center;
+}
+
+#pantalla_instrumentos
+#lista_instrumentos{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	border-top: solid 2px rgb(223, 164, 103);
+	
+}
+
+
+#pantalla_instrumentos
+#lista_instrumentos
+ul{
+	
+}
+
+
+
+#pantalla_instrumentos
+#lista_instrumentos
+ul
+li.instrumento_item{
+	background-color: rgb(200,200,200);
+	color: rgb(70,70,70);
+	text-align: left;
+	height: 20px;
+	padding-top: 4px;
+	border-bottom: solid 1px rgb(190,190,190);
+}
