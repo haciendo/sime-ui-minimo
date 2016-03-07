@@ -3,10 +3,13 @@ var SocketScannerVortex = {
         var _this = this;
 		this.verbose = opt.verbose || false;
 		this.conectores = {};
-//        this.getRangoIpLocal(function(rango){
-//            _this.findServers(81, rango, 1, 255, 40, 10000);
-//        });
-		this.buscarNodos();
+        this.getRangoIpLocal(function(rango){
+			_this.findServers(1234, rango, 1, 255, 255, 20000);
+            //setInterval(function(){
+				//_this.findServers(1234, rango, 1, 255, 255, 20000);
+			//}, 30000);
+        });
+//		this.buscarNodos();
 	},
     findServers: function (port, ipBase, ipLow, ipHigh, maxInFlight, timeout) {
         var _this = this;
@@ -22,7 +25,7 @@ var SocketScannerVortex = {
             ++numInFlight;
             var socket = new WebSocket(address, ['mensaje_vortex']);
             var timer = setTimeout(function() {
-                console.log(address + " timeout");
+                //console.log(address + " timeout");
                 var s = socket;
                 socket = null;
                 s.close();
@@ -41,7 +44,7 @@ var SocketScannerVortex = {
                         }
                     });
 			        Vx.conectarCon(conector);
-                    conectores[address] = conector;
+                    _this.conectores[address] = conector;
                     --numInFlight;
                     next();
                 }
@@ -70,7 +73,7 @@ var SocketScannerVortex = {
     },
 	intentarConectarConServer: function(url, onError){
 		var _this = this;
-		var ws = new WebSocket("ws:" + url + ":81", ['mensaje_vortex']); 
+		var ws = new WebSocket("ws:" + url + ":1234", ['mensaje_vortex']); 
 		ws.onopen = function(){ 
 			conector = new NodoConectorSocketNativo({socket:ws, verbose: _this.verbose});
 			Vx.conectarCon(conector);
@@ -82,10 +85,11 @@ var SocketScannerVortex = {
 		this.intentarConectarConServer('192.168.4.1');
 		//Vx.conectarCon(new NodoConectorSocket('192.168.4.1'));
 		//_this.conectarConAdaptador('192.168.4.1');
-		for(var i=0; i<256; i++){
-			//_this.conectarConAdaptador('192.168.1.' + i);
-			this.intentarConectarConServer('192.168.0.' + i);
-		}	
+		this.intentarConectarConServer('192.168.1.65');
+//		for(var i=0; i<256; i++){
+//			//_this.conectarConAdaptador('192.168.1.' + i);
+//			this.intentarConectarConServer('192.168.1.' + i);
+//		}	
 	},
     getRangoIpLocal: function(cb){
         window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;   //compatibility for firefox and chrome
