@@ -4,7 +4,7 @@ var pantalla_instrumentos = function() {
 	
     /**** custom_toolbar *******/
 	ui.find('#scan').on('click', function(){
-        
+        SocketScannerVortex.scanearRedLocal();
 	});
 	/***************************/
     

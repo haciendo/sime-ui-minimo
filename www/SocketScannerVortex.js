@@ -3,12 +3,7 @@ var SocketScannerVortex = {
         var _this = this;
 		this.verbose = opt.verbose || false;
 		this.conectores = {};
-        this.getRangoIpLocal(function(rango){
-			_this.findServers(1234, rango, 1, 255, 255, 20000);
-            //setInterval(function(){
-				//_this.findServers(1234, rango, 1, 255, 255, 20000);
-			//}, 30000);
-        });
+        this.scanearRedLocal();
 //		this.buscarNodos();
 	},
     findServers: function (port, ipBase, ipLow, ipHigh, maxInFlight, timeout) {
@@ -90,6 +85,13 @@ var SocketScannerVortex = {
 //			//_this.conectarConAdaptador('192.168.1.' + i);
 //			this.intentarConectarConServer('192.168.1.' + i);
 //		}	
+	},
+	scanearRedLocal: function(){
+		var _this = this;
+		this.getRangoIpLocal(function(rango){
+			_this.findServers(1234, rango, 1, 255, 255, 20000);
+        });
+		this.findServers(1234, "192.168.4", 1, 1, 1, 20000);
 	},
     getRangoIpLocal: function(cb){
         window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;   //compatibility for firefox and chrome

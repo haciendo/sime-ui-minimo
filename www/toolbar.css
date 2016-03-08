@@ -67,6 +67,7 @@
 	top: 0px;
 	height: 40px;
 	width: 40px;
+	cursor: pointer;
 }
 
 .custom_toolbar{
@@ -116,4 +117,5 @@ div.link_pantalla{
 	padding: 6px 1px 5px 5px;
 	
 	border-color: rgb(100,100,100);
+	cursor: pointer;
 }
