@@ -22,3 +22,41 @@ div.pantalla{
 	background-color: rgb(246, 178, 107);
 }
 
+
+div.inputText{
+	border: solid 1px rgb(190, 169, 147);
+	background-color: rgb(252, 222, 147);
+	
+	position: absolute;
+	height: 25px;	
+}
+
+div.inputText
+input{
+	border: transparent;
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+	
+}
+
+div.list{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	border-top: solid 2px rgb(223, 164, 103);
+}
+
+li.list_item{
+	background-color: rgb(200,200,200);
+	color: rgb(70,70,70);
+	text-align: left;
+	height: 20px;
+	padding-top: 4px;
+	border-bottom: solid 1px rgb(190,190,190);
+}
