@@ -40,7 +40,7 @@ var onDeviceReady = function() {
 	
 	Vx.when({tipoDeMensaje:"vortex.debug.error"}, function(m){console.log(m);})
 	
-	SocketScannerVortex.start({verbose:true});
+	//SocketScannerVortex.start({verbose:true});
 	
 	toolbar();
 	
