@@ -9,7 +9,7 @@ if(typeof(require) != "undefined"){
 }
 
 var NodoConectorSocketNativo = function(opt){
-    this.socket = opt.socket||new WebSocket("ws:" + opt + ":81", ['mensaje_vortex']); 
+    this.socket = opt.socket||new WebSocket("ws://" + opt + ":1234", ['mensaje_vortex']); 
     this.verbose = opt.verbose||false;
     this.id = opt.id||"anonimo";
     this.alDesconectar = opt.alDesconectar||function(){};
@@ -25,6 +25,7 @@ var NodoConectorSocketNativo = function(opt){
 	};
 	this.socket.onopen = function(){ 
 		if(this.verbose) console.log('socket ' + this.id + ' conectado');
+		
 	};
 	this.socket.onmessage = function(m){
 		var mensaje = JSON.parse(m.data);			
