@@ -33,11 +33,11 @@ var onDeviceReady = function() {
     
 	// versión mínima no tiene conexion con server
 	//Vx.conectarCon(new NodoConectorSocket('https://sime-backend.herokuapp.com'));
-	Vx.conectarCon(new NodoConectorSocket('http://192.168.0.5:3000'));
-	//Vx.conectarCon(new NodoConectorSocketNativo('192.168.4.1'));
+	//Vx.conectarCon(new NodoConectorSocket('http://192.168.0.5:3000'));
+	Vx.conectarCon(new NodoConectorSocketNativo('192.168.4.1'));
 	
 	Vx.when({tipoDeMensaje:"vortex.debug.error"}, function(m){console.log(m);})
-	
+
 	toolbar();
 	
 	
